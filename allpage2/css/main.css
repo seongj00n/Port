@@ -1,0 +1,1128 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/*사이드 네비*/
+aside {
+  position: fixed;
+  top: 30%;
+  left: 100%;
+  transform: translateX(-100%);
+  z-index: 3;
+}
+
+.side_nav > li {
+  width: 70px;
+  height: 60px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  margin: 5px 0;
+  background-color: #fff;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px 0;
+}
+.side_nav > li > a > i {
+  font-size: 25px;
+  margin: 0 0 5px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  width: 100%;
+  height: 100%;
+}
+#container section {
+  height: 100%;
+  position: relative;
+}
+
+.section:first-child {
+  background: linear-gradient(120deg, #253ad4, #356395);
+}
+.section:nth-child(2) {
+  background-color: #e6e9f6;
+}
+.section:nth-child(3) {
+  background-color: #eeeeee;
+}
+.section:nth-child(4) {
+  background-color: #fff;
+}
+.section:nth-child(5) {
+  background-color: #fafafa;
+}
+.section:last-child {
+  background: linear-gradient(120deg, #253ad4, #356395);
+}
+
+.section_wrap {
+  width: 1663px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 130px;
+  display: flex;
+  position: relative;
+}
+.section_wrap > .explain {
+  width: 38%;
+  height: 100%;
+  padding: 150px 0;
+}
+
+.pulse_box {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.pulse {
+  z-index: -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 30rem;
+}
+.pulse circle {
+  fill: #ff5154;
+  transform: scale(0);
+  opacity: 0;
+  transform-origin: 50% 50%;
+  animation: pulse 2s cubic-bezier(0.5, 0.5, 0, 1);
+}
+.pulse circle:nth-child(2) {
+  fill: #7fc6a4;
+  animation: pulse 2s 0.75s cubic-bezier(0.5, 0.5, 0, 1);
+}
+.pulse circle:nth-child(3) {
+  fill: #e5f77d;
+  animation: pulse 2s 1.5s cubic-bezier(0.5, 0.5, 0, 1);
+}
+
+@keyframes pulse {
+  25% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.top_img {
+  width: 700px;
+  height: 500px;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top_img > img:first-child {
+  width: 70%;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.top_img > img:last-child {
+  width: 15%;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+  top: 35%;
+  left: 45%;
+  transform: translateX(-45%);
+}
+
+.title {
+  width: 700px;
+  height: 100px;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+}
+
+.explain > h1 {
+  font-size: 20px;
+  margin: 0 0 40px 0;
+  padding: 10px;
+  width: 28%;
+}
+
+.section:nth-child(2) > .section_wrap > .explain > h1 {
+  background-color: #9cafe9;
+}
+.section:nth-child(3) > .section_wrap > .explain > h1 {
+  background-color: #ff75ed;
+}
+.section:nth-child(4) > .section_wrap > .explain > h1 {
+  background-color: #9193bc;
+}
+.section:nth-child(5) > .section_wrap > .explain > h1 {
+  background-color: #c7c8ca;
+}
+
+.explain > h2 {
+  font-size: 40px;
+  color: #5e6b9e;
+  margin: 0 10px 10px 0;
+}
+
+.section:nth-child(2) > .section_wrap > .explain > h2 {
+  color: #353f67;
+}
+.section:nth-child(3) > .section_wrap > .explain > h2 {
+  color: #df42b1;
+}
+.section:nth-child(4) > .section_wrap > .explain > h2 {
+  color: #151853;
+}
+.section:nth-child(5) > .section_wrap > .explain > h2 {
+  color: #152549;
+}
+
+.sub_title {
+  font-size: 32px;
+}
+.explain > h3 {
+  font-size: 22px;
+  font-weight: normal;
+}
+.explain > h4 {
+  font-size: 16px;
+  margin: 50px 0 0 0;
+}
+
+.explain > ul {
+  margin: 10px 0;
+  display: inline-block;
+  margin: 10px 0 30px 0;
+}
+.explain > ul li {
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.explain > p {
+  font-size: 14px;
+  width: 80%;
+  height: auto;
+  margin: 0 0 80px 0;
+  line-height: 24px;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+/*버튼*/
+.explain > button {
+  border: none;
+  width: 150px;
+  height: 32px;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn_1 {
+  background: linear-gradient(to left, #353f67, #4b5c9d);
+}
+.btn_1 {
+  background-color: #4b5c9d;
+}
+
+.btn_1:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #4b5c9d;
+  transition: all 0.3s ease;
+}
+.btn_1:hover {
+  color: #fff;
+}
+.btn_1:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn_1:active {
+  top: 2px;
+}
+
+.btn_2 {
+  background: linear-gradient(to left, #bd4fa1, #ff75ed);
+}
+.btn_2 {
+  background-color: #ff75ed;
+}
+
+.btn_2:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #ff75ed;
+  transition: all 0.3s ease;
+}
+.btn_2:hover {
+  color: #fff;
+}
+.btn_2:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn_2:active {
+  top: 2px;
+}
+
+.btn_3 {
+  background: linear-gradient(to left, #151853, #222785);
+}
+.btn_3 {
+  background-color: #222785;
+}
+
+.btn_3:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #222785;
+  transition: all 0.3s ease;
+}
+.btn_3:hover {
+  color: #fff;
+}
+.btn_3:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn_3:active {
+  top: 2px;
+}
+
+.btn_4 {
+  background: linear-gradient(to left, #9a9fab, #c7c8ca);
+  color: #444;
+}
+.btn_4 {
+  background-color: #c7c8ca;
+}
+
+.btn_4:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #c7c8ca;
+  transition: all 0.3s ease;
+}
+.btn_4:hover {
+  color: #fff;
+}
+.btn_4:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn_4:active {
+  top: 2px;
+}
+
+.mobile {
+  z-index: 3;
+  position: absolute;
+  top: 41%;
+  left: 36%;
+  width: 240px;
+  height: 505px;
+  background-image: url("../img/phone.png");
+  background-size: 100% 100%;
+}
+
+/*모바일 이미지*/
+.mobile_wrap {
+  width: 228px;
+  height: 495px;
+  position: absolute;
+  top: 5px;
+  left: 7.5px;
+  border-radius: 26px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.mobile_slide01 {
+  width: 228px;
+  height: 6435px;
+}
+.mobile_slide02 {
+  width: 228px;
+  height: 6930px;
+}
+
+.section_wrap > .webpage01,
+.webpage02,
+.webpage03,
+.webpage04 {
+  width: 62%;
+  height: 100%;
+  margin: 0 0 0 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgbox {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bgbox > i {
+  color: #ddd;
+  font-size: 50px;
+  display: none;
+}
+
+.bgbox:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.bgbox:hover > i {
+  display: block;
+}
+
+.webpage01 > .web_image > img {
+  width: 100%;
+}
+.webpage02 > img {
+  width: 100%;
+}
+.webpage03 > img {
+  width: 100%;
+}
+.webpage04 > img {
+  width: 100%;
+}
+
+/*point color*/
+
+.color_01 > li:first-child {
+  background-color: #353f67;
+}
+.color_01 > li:nth-child(2) {
+  background-color: #5e6b9e;
+}
+.color_01 > li:last-child {
+  background-color: #9cafe9;
+}
+
+.color_02 > li:first-child {
+  background-color: #212435;
+}
+.color_02 > li:nth-child(2) {
+  background-color: #df42b1;
+}
+.color_02 > li:last-child {
+  background-color: #fff9ef;
+}
+
+.color_03 > li:first-child {
+  background-color: #151853;
+}
+.color_03 > li:nth-child(2) {
+  background-color: #505add;
+}
+.color_03 > li:last-child {
+  background-color: #df42b1;
+}
+
+.color_04 > li:first-child {
+  background-color: #152549;
+}
+.color_04 > li:nth-child(2) {
+  background-color: #eeeeee;
+  border: 1px solid #ccc;
+}
+.color_04 > li:last-child {
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+/*about me*/
+
+.last_wrap {
+  width: 1663px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 250px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.last_wrap > .introduce {
+  width: 30%;
+  height: 100%;
+  padding: 130px 0 0 0;
+}
+.last_wrap > .introduce > h1 {
+  font-size: 40px;
+  margin: 0 0 0 50px;
+  color: #fff;
+}
+
+.contact {
+  width: 250px;
+  height: 300px;
+  margin: 0 0 0 50px;
+}
+.contact > h3 {
+  margin: 0 0 20px 0;
+  font-size: 20px;
+  color: #fff;
+}
+.contact > h3 > span {
+  font-size: 14px;
+}
+.photo {
+  width: 160px;
+  height: 210px;
+  background-color: #fff;
+  margin: 70px 0 20px 65px;
+  overflow: hidden;
+}
+.photo > img {
+  width: 100%;
+  height: auto;
+}
+.icon {
+  width: 100%;
+  height: 45px;
+}
+.icon > ul > li {
+  float: left;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  margin: 0 10px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon > ul > li > i {
+  font-size: 18px;
+  color: #fff;
+}
+.icon > ul > li:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+.icon > ul > li:hover i {
+  color: #253ad4;
+}
+
+.address_sub {
+  width: 560px;
+  height: 50px;
+  position: relative;
+  margin: 20px 0 0 0;
+}
+.address {
+  display: none;
+}
+
+.balloon {
+  position: relative;
+  padding: 9px 20px;
+  background-color: skyblue;
+  border-radius: 10px;
+  float: left;
+}
+.balloon:first-child {
+  z-index: 0;
+}
+.balloon:nth-child(2) {
+  z-index: 1;
+  top: 0;
+  left: -135px;
+}
+.balloon:nth-child(3) {
+  z-index: 2;
+  top: 0;
+  left: -250px;
+}
+.balloon:nth-child(4) {
+  z-index: 3;
+  top: 0;
+  left: -325px;
+}
+
+.balloon h4 {
+  text-align: center;
+  font-size: 12px;
+}
+.balloon h4 > span {
+  font-size: 11px;
+}
+
+.balloon:after {
+  border-top: 10px solid skyblue;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 0px solid transparent;
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+/*프로필 정보 table*/
+table {
+  font-size: 14px;
+  color: #fff;
+}
+table tr {
+  line-height: 22px;
+}
+table th {
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+.bg_box {
+  width: 65%;
+  height: 40%;
+  padding: 150px 0 0 0;
+  position: relative;
+}
+.bg_box > h3 {
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 60%;
+  left: 5%;
+}
+.bg_box > img {
+  width: 80%;
+  height: 90%;
+}
+
+.career {
+  width: 65%;
+  height: 50%;
+  display: flex;
+  color: #fff;
+  padding: 40px 0 0 0;
+}
+
+.bold {
+  margin: 0 15px 0 0;
+  font-weight: normal;
+}
+.career > .box {
+  width: 50%;
+  height: 70%;
+}
+.career > .box > h3 {
+  margin: 0 0 10px 0;
+  padding: 5px 10px;
+  width: 30%;
+  background-color: #5ba6f7;
+  color: #fff;
+  position: relative;
+}
+
+/*삼각형*/
+.career > .box > h3:after {
+  width: 0px;
+  height: 0px;
+  border-top: 13px solid transparent;
+  border-bottom: 13px solid transparent;
+  border-right: 13px solid transparent;
+  border-left: 13px solid #5ba6f7;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  content: "";
+}
+
+.career > .box > ul {
+  margin: 0 0 45px 0;
+}
+.career > .box > ul > li {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: bold;
+}
+
+/*skill*/
+.graph {
+  width: 90%;
+  list-style: none;
+}
+.graph li {
+  position: relative;
+  padding: 1px 0;
+  white-space: nowrap;
+  margin: 5px 0;
+}
+.graph li span {
+  display: inline-block;
+  position: relative;
+  height: 20px;
+  line-height: 18px;
+  background: linear-gradient(to left, #8c96ff, #6771da);
+  padding: 0 10px;
+  color: #ddd;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* 마지막으로 스크롤되는 about me */
+
+/* aboutMe 왼쪽 */
+
+#aboutMe {
+  width: 100%;
+  height: 100vh;
+}
+.aboutMeContents {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  background-image: linear-gradient(to top, #71acff 10%, #206cd6 90%);
+  display: flex;
+}
+
+.aboutMeLeft {
+  width: 65%;
+  height: 100%;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutMetitle {
+  width: 100%;
+  height: 15%;
+  color: #ddd;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+.aboutMetitle h2 {
+  font-size: 44px;
+}
+
+.aboutMeInfo {
+  width: 100%;
+  height: 40%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+}
+
+.aboutMeCareer {
+  width: 100%;
+  height: 50%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  letter-spacing: -1px;
+  padding: 0px 300px;
+  margin: 0px 0 0 0px;
+}
+
+/* study, history 영역 */
+
+.aboutMeProfile {
+  width: 50%;
+  background: transparent;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+.aboutMeProfile dl dt {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Roboto;
+  color: #ddd;
+}
+.aboutMeProfile dl dd {
+  padding-top: 15px;
+  color: #ddd;
+  font-size: 13px;
+}
+
+.aboutMeSkill {
+  width: 50%;
+  height: 25%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 80px;
+  font-family: Roboto;
+  letter-spacing: -1px;
+  margin: -345px 0 0 200px;
+}
+
+.aboutMeSkill dl dt {
+  width: 420px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Roboto;
+  color: #ddd;
+  margin: 0 0 10px -55px;
+}
+
+.pro {
+  display: flex;
+  justify-content: space-between;
+  color: #f8f8f8;
+  position: relative;
+  margin: 0 65px;
+}
+.pro p {
+  position: absolute;
+  top: 8px;
+  left: -120px;
+}
+progress {
+  width: 300px;
+  height: 30px;
+}
+
+/* aboutMe 오른쪽 */
+
+.aboutMeRight {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.aboutMeImg {
+  width: 100%;
+  height: 45%;
+  background: transparent;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  margin: -200px 0 0 0px;
+}
+.aboutMeImgBox {
+  width: 40%;
+  height: 50%;
+  border: 1px solid #666;
+  margin: 0px 0 0 30px;
+}
+.aboutMeImgBox img {
+  width: 100%;
+  height: 100%;
+}
+
+.aboutMeEtc {
+  width: 100%;
+  height: 38%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  word-spacing: -1px;
+  opacity: 0;
+  margin-left: 300px;
+  max-width: 100%;
+}
+.aboutMeEtc dl:first-child {
+  height: 38%;
+}
+.aboutMeEtc dl:first-child dt {
+  width: 50%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Roboto;
+  color: #f8f8f8;
+}
+.aboutMeEtc dl:first-child dd {
+  padding-top: 15px;
+  color: #f8f8f8;
+  width: 180px;
+}
+.aboutMeEtc dl:first-child dd:nth-child(n + 3):nth-child(n + 5) {
+  position: relative;
+  bottom: 93px;
+  left: 25%;
+}
+
+.aboutMeEtc dl:last-child dt {
+  width: 50%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Roboto;
+  color: #f8f8f8;
+}
+.aboutMeEtc dl:last-child dd {
+  float: left;
+  padding-top: 20px;
+  padding-right: 30px;
+  position: relative;
+}
+
+/* 아이콘 hover 했을 때 하단에 나타나는 메일주소,번호 등 */
+
+.aboutMeEtc dl:last-child dd > i + p {
+  display: none;
+  transition: all 0.3s ease;
+}
+.aboutMeEtc dl:last-child dd > i:hover + p {
+  display: block;
+  color: #eee;
+  position: absolute;
+  width: auto;
+  font-size: 11px;
+  background: #081f36;
+  border-radius: 25px;
+  padding: 7px;
+}
+
+/* css animation */
+
+/* aboutMe 에서 텍스트 나타나고 사라지는 animation */
+
+#fadeText {
+  color: #999;
+  text-transform: uppercase;
+  font-size: 46px;
+  font-weight: bold;
+  width: 100%;
+  height: 20%;
+  display: block;
+  font-family: "Roboto";
+  line-height: 40px;
+  color: #ddd;
+}
+
+#flip {
+  height: 40px;
+  overflow: hidden;
+}
+
+#flip > div > div {
+  color: #fff;
+  height: 45px;
+  margin-bottom: 45px;
+  display: inline-block;
+  color: #f8f8f8;
+}
+
+#flip div:first-child {
+  animation: show 7.5s linear infinite;
+}
+
+@keyframes show {
+  0% {
+    margin-top: -270px;
+  }
+  5% {
+    margin-top: -180px;
+  }
+  33% {
+    margin-top: -180px;
+  }
+  38% {
+    margin-top: -90px;
+  }
+  66% {
+    margin-top: -90px;
+  }
+  71% {
+    margin-top: 0px;
+  }
+  99.99% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: -270px;
+  }
+}
+
+/* 타이핑 되는 animation css */
+
+.intro_list {
+  display: none;
+}
+
+@keyframes cursor {
+  0% {
+    border-right: 1px solid #fff;
+  }
+
+  50% {
+    border-right: 1px solid #666;
+  }
+
+  100% {
+    border-right: 1px solid #fff;
+  }
+}
+
+.aboutMeEtc {
+  width: 100%;
+  height: 38%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  word-spacing: -1px;
+  opacity: 0;
+  margin-left: 0px;
+  max-width: 100%;
+}
+.aboutMeEtc dl:first-child {
+  height: 38%;
+}
+.aboutMeEtc dl:first-child dt {
+  width: 50%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Roboto;
+  color: #f8f8f8;
+}
+.aboutMeEtc dl:first-child dd {
+  padding-top: 15px;
+  color: #f8f8f8;
+  width: 180px;
+}
+.aboutMeEtc dl:first-child dd:nth-child(n + 3):nth-child(n + 5) {
+  position: relative;
+  bottom: 93px;
+  left: 25%;
+}
+
+.aboutMeEtc dl:last-child dt {
+  width: 50%;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: Roboto;
+  color: #f8f8f8;
+}
+.aboutMeEtc dl:last-child dd {
+  float: left;
+  padding-top: 20px;
+  padding-right: 30px;
+  position: relative;
+}
+.aboutMeEtc dl:last-child dd i {
+  font-size: 26px;
+  color: #123d69;
+  cursor: pointer;
+  padding-bottom: 15px;
+}
+.aboutMeEtc dl:last-child dd i:hover::before {
+  color: #f8f8f8;
+  background-color: #081f36;
+}
+.aboutMeEtc dl:last-child dd i::before {
+  background: #eee;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aboutMeSkill {
+  width: 100%;
+  height: 25%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 80px;
+  font-family: Roboto;
+  letter-spacing: -1px;
+}
